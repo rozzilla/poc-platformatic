@@ -1,7 +1,8 @@
 {
   "server": {
     "hostname": "{PLT_MAIN_HOST}",
-    "port": "{PLT_MAIN_PORT}"
+    "port": "{PLT_MAIN_PORT}",
+    "logger": { "level": "debug" }
   },
   "core": {
     "connectionString": "{PLT_DB_TYPE}://{PLT_DB_USERNAME}:{PLT_DB_PASSWORD}@{PLT_DB_HOST}/{PLT_DB_NAME}"
