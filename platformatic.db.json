@@ -7,10 +7,12 @@
   },
   "core": {
     "connectionString": "{PLT_DB_TYPE}://{PLT_DB_USERNAME}:{PLT_DB_PASSWORD}@{PLT_DB_HOST}/{PLT_DB_NAME}",
-    "schema": ["my_schema"],
     "events": false
   },
   "migrations": {
     "dir": "./migrations"
+  },
+  "types": {
+    "autogenerate": "true"
   }
 }
