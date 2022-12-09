@@ -6,9 +6,14 @@
     "logger": { "level": "{PLT_SERVER_LOGGER_LEVEL}" },
     "pluginTimeout": 0
   },
+  "migrations": {
+    "autoApply": false,
+    "dir": "./migrations",
+    "table": "public.versions"
+  },
   "core": {
     "connectionString": "{PLT_DB_TYPE}://{PLT_DB_USERNAME}:{PLT_DB_PASSWORD}@{PLT_DB_HOST}/{PLT_DB_NAME}",
     "events": false,
-    "schema": ["public"]
+    "schema": ["public", "myschema"]
   }
 }
