@@ -1,5 +1,4 @@
 {
-  "$schema": "./platformatic.db.schema.json",
   "server": {
     "hostname": "{PLT_MAIN_HOST}",
     "port": "{PLT_MAIN_PORT}",
@@ -8,12 +7,10 @@
   },
   "migrations": {
     "autoApply": false,
-    "dir": "./migrations",
-    "table": "public.versions"
+    "dir": "./migrations"
   },
   "core": {
     "connectionString": "{PLT_DB_TYPE}://{PLT_DB_USERNAME}:{PLT_DB_PASSWORD}@{PLT_DB_HOST}/{PLT_DB_NAME}",
-    "events": false,
-    "schema": ["public", "myschema"]
+    "events": false
   }
 }

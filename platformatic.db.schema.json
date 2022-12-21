@@ -1,46 +1,6 @@
 {
   "$id": "https://schemas.platformatic.dev/db",
   "type": "object",
-  "$defs": {
-    "plugin": {
-      "$id": "https://schemas.platformatic.dev/service/plugin",
-      "type": "object",
-      "properties": {
-        "path": {
-          "type": "string"
-        },
-        "stopTimeout": {
-          "type": "integer"
-        },
-        "typescript": {
-          "type": "object",
-          "properties": {
-            "outDir": {
-              "type": "string"
-            }
-          },
-          "additionalProperties": false,
-          "required": [
-            "outDir"
-          ]
-        },
-        "fallback": {
-          "type": "boolean"
-        },
-        "hotReload": {
-          "type": "boolean",
-          "default": true
-        },
-        "options": {
-          "type": "object"
-        }
-      },
-      "additionalProperties": false,
-      "required": [
-        "path"
-      ]
-    }
-  },
   "properties": {
     "server": {
       "$id": "https://schemas.platformatic.dev/service/server",
@@ -175,6 +135,26 @@
         },
         "poolSize": {
           "type": "integer"
+        },
+        "autoTimestamp": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "createdAt": {
+                  "type": "string",
+                  "default": "created_at"
+                },
+                "updatedAt": {
+                  "type": "string",
+                  "default": "updated_at"
+                }
+              }
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         },
         "graphql": {
           "anyOf": [
@@ -493,7 +473,7 @@
       ]
     },
     "metrics": {
-      "$id": "https://schemas.platformatic.dev/db/metrics",
+      "$id": "https://schemas.platformatic.dev/service/metrics",
       "anyOf": [
         {
           "type": "boolean"
@@ -539,6 +519,47 @@
       "additionalProperties": false
     },
     "plugin": {
+      "$id": "https://schemas.platformatic.dev/service/pluginTypes",
+      "$defs": {
+        "plugin": {
+          "$id": "https://schemas.platformatic.dev/service/plugin",
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string"
+            },
+            "stopTimeout": {
+              "type": "integer"
+            },
+            "typescript": {
+              "type": "object",
+              "properties": {
+                "outDir": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "outDir"
+              ]
+            },
+            "fallback": {
+              "type": "boolean"
+            },
+            "hotReload": {
+              "type": "boolean",
+              "default": true
+            },
+            "options": {
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "path"
+          ]
+        }
+      },
       "anyOf": [
         {
           "type": "array",
@@ -555,6 +576,9 @@
         },
         {
           "$ref": "#/$defs/plugin"
+        },
+        {
+          "type": "string"
         }
       ]
     }

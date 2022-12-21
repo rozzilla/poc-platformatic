@@ -1,3 +1,2 @@
-DROP TABLE IF EXISTS "myschema"."mytable";
-DROP TABLE IF EXISTS "myschema"."template";
-DROP SCHEMA IF EXISTS "myschema";
+DROP TABLE IF EXISTS `table2`;
+DROP TABLE IF EXISTS `table1`;
