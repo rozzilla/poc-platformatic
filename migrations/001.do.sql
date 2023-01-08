@@ -14,3 +14,8 @@ CREATE TABLE IF NOT EXISTS ghi (
   __a0__ INTEGER,
   PRIMARY KEY (id)
 );
+
+CREATE TABLE IF NOT EXISTS __lmn__ (
+  __id__ INTEGER NOT NULL,
+  PRIMARY KEY (__id__)
+);
