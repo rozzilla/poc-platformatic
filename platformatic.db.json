@@ -12,7 +12,6 @@
   },
   "core": {
     "connectionString": "{PLT_DB_CONNECTION_STRING}",
-    "events": false,
-    "schema": ["public", "myschema"]
+    "events": false
   }
 }
