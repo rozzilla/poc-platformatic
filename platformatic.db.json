@@ -12,6 +12,7 @@
   },
   "core": {
     "connectionString": "{PLT_DB_CONNECTION_STRING}",
-    "events": false
+    "events": false,
+    "schema": ["test1", "test2"]
   }
 }
