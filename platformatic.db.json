@@ -13,6 +13,6 @@
   "core": {
     "connectionString": "{PLT_DB_CONNECTION_STRING}",
     "events": false,
-    "schema": ["public", "entity_export"]
+    "schema": ["{PLT_SCHEMA_1}", "{PLT_SCHEMA_2}"]
   }
 }
