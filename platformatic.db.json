@@ -14,5 +14,10 @@
     "connectionString": "{PLT_DB_CONNECTION_STRING}",
     "events": false,
     "schema": ["{PLT_SCHEMA_1}", "{PLT_SCHEMA_2}"]
+  },
+  "authorization": {
+    "jwt": {
+      "secret": "{PLT_JWT_SECRET}"
+    }
   }
 }
