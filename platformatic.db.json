@@ -1,23 +1,26 @@
 {
   "$schema": "./platformatic.db.schema.json",
   "server": {
-    "hostname": "{PLT_MAIN_HOST}",
-    "port": "{PLT_MAIN_PORT}",
-    "logger": { "level": "{PLT_SERVER_LOGGER_LEVEL}" },
-    "pluginTimeout": 0
-  },
-  "migrations": {
-    "autoApply": false,
-    "dir": "./migrations"
+    "hostname": "{PLT_SERVER_HOSTNAME}",
+    "port": "{PORT}",
+    "logger": {
+      "level": "{PLT_SERVER_LOGGER_LEVEL}"
+    }
   },
   "core": {
-    "connectionString": "{PLT_DB_CONNECTION_STRING}",
-    "events": false,
-    "schema": ["{PLT_SCHEMA_1}", "{PLT_SCHEMA_2}"]
+    "connectionString": "{DATABASE_URL}",
+    "graphql": true,
+    "openapi": true
   },
-  "authorization": {
-    "jwt": {
-      "secret": "{PLT_JWT_SECRET}"
+  "plugin": {
+    "path": "./index.ts",
+    "typescript": {
+      "outDir": "dist"
     }
+  },
+  "dashboard": true,
+  "metrics": true,
+  "types": {
+    "autogenerate": true
   }
 }

@@ -1,9 +1,0 @@
-DROP TABLE test2.books;
-DROP TABLE test1.authors;
-DROP TABLE test4.books;
-DROP TABLE test3.authors;
-
-DROP SCHEMA IF EXISTS test1;
-DROP SCHEMA IF EXISTS test2;
-DROP SCHEMA IF EXISTS test3;
-DROP SCHEMA IF EXISTS test4;
