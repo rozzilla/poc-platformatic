@@ -20,7 +20,7 @@
     "@fastify/type-provider-typebox": "^2.4.0",
     "@sinclair/typebox": "^0.25.23",
     "autocannon": "^7.10.0",
-    "platformatic": "^0.14.0",
+    "platformatic": "^0.18.0",
     "jsonwebtoken": "^9.0.0",
     "@types/jsonwebtoken": "^9.0.1"
   },
