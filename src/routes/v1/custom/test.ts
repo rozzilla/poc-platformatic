@@ -8,7 +8,18 @@ export default async function (app: FastifyInstance) {
     {
       schema: {
         response: {
-          200: Type.Object({ prop1: Type.String(), prop2: Type.Null() }),
+          200: {
+            type: "object",
+            properties: {
+              prop1: {
+                type: "string",
+              },
+              prop2: {
+                type: "null",
+              },
+            },
+            required: ["prop1", "prop2"],
+          },
         },
       },
     },
